@@ -1,6 +1,6 @@
 FROM phusion/baseimage:0.9.15
 MAINTAINER Pomin Wu <pomin5@gmail.com>
-ENV REFRESHED_AT 2015-01-09
+ENV REFRESHED_AT 2015-01-28
 
 ENV HOME /root
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
@@ -49,5 +49,3 @@ RUN mkdir -p /var/log/vsftpd
 RUN mkdir -p /var/run/vsftpd/empty
 RUN mkdir /etc/service/vsftpd
 ADD service/vsftpd.sh /etc/service/vsftpd/run
-
-VOLUME ["/var/www", "/var/log"]
