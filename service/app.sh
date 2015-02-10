@@ -11,3 +11,9 @@ if [ ! -f /home/app/password.txt ]; then
   pwgen 16 1 > /home/app/password.txt
 fi
 echo app:$(cat /home/app/password.txt) | chpasswd
+
+if [ $ENABLE_MY_KEY ]; then
+  mkdir -p /home/app/.ssh
+  chown -R app:www-data /home/app/.ssh
+  cp /tmp/mykey.pub /home/app/.ssh/authorized_keys
+fi
