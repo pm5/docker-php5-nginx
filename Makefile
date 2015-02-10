@@ -1,5 +1,6 @@
 NAME = pomin5/php5-nginx
 VERSION = 0.1.3
+CONTAINER_NAME=`pwd | sed 's/.*\///'`_php5-nginx
 
 .PHONY: build test run
 
@@ -22,4 +23,5 @@ run:
 		-e ENABLE_MY_KEY=1 \
 	 	-v $(PWD):/var/www \
 	 	-v $(PWD)/.run/log:/var/log \
+		--name $(CONTAINER_NAME) \
 	 	$(NAME):$(VERSION)
