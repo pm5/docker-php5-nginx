@@ -1,5 +1,5 @@
 NAME = pomin5/php5-nginx
-VERSION = latest
+VERSION = 0.1.5
 CONTAINER_NAME=`pwd | sed 's/.*\///'`_php5-nginx
 
 .PHONY: build test run
