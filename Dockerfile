@@ -7,7 +7,7 @@ CMD ["/sbin/my_init"]
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-    apt-get install -yq pwgen && \
+    apt-get install -yq pwgen git-core && \
     apt-get install -yq vsftpd && \
     apt-get install -yq php5 php5-fpm php-apc php-pear php5-gd php5-curl php5-sqlite php5-mysql php5-pgsql && \
     apt-get install -yq nginx-full && \
