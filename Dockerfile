@@ -39,12 +39,7 @@ ADD etc/php5/fpm/php.ini /etc/php5/fpm/php.ini
 ADD etc/php5/fpm/pool.d /etc/php5/fpm/pool.d
 ADD service/php5-fpm.sh /etc/service/php5-fpm/run
 
-RUN echo "local_enable=YES" >> /etc/vsftpd.conf
-RUN echo "write_enable=YES" >> /etc/vsftpd.conf
-RUN echo "local_umask=022" >> /etc/vsftpd.conf
-RUN echo "chroot_local_user=NO" >> /etc/vsftpd.conf
-RUN echo "xferlog_file=/var/log/vsftpd/vsftpd.log" >> /etc/vsftpd.conf
-RUN echo "anonymous_enable=NO" >> /etc/vsftpd.conf
+ADD etc/vsftpd.conf /etc/vsftpd.conf
 ADD service/vsftpd.sh /etc/service/vsftpd/run
 
 RUN chmod 755 /etc/service/*/run
