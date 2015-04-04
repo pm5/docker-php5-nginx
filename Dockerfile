@@ -1,6 +1,6 @@
 FROM phusion/baseimage:0.9.15
 MAINTAINER Pomin Wu <pomin5@gmail.com>
-ENV REFRESHED_AT 2015-02-24
+ENV REFRESHED_AT 2015-04-05
 
 ENV HOME /root
 CMD ["/sbin/my_init"]
