@@ -32,7 +32,9 @@ RUN mkdir /etc/service/nginx
 ADD service/nginx.sh /etc/service/nginx/run
 RUN chmod 755 /etc/service/nginx/run
 
-RUN sed -i 's/memory_limit = 128M/memory_limit = 256M/' /etc/php5/fpm/php.ini
+ADD etc/php5/fpm/php-fpm.conf /etc/php5/fpm
+ADD etc/php5/fpm/php.ini /etc/php5/fpm
+ADD etc/php5/fpm/pool.d /etc/php5/fpm
 RUN mkdir /var/log/php5
 RUN mkdir /etc/service/php5-fpm
 ADD service/php5-fpm.sh /etc/service/php5-fpm/run
