@@ -8,19 +8,19 @@ CMD ["/sbin/my_init"]
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
     apt-get install -yq \
-      pwgen \
       git-core \
-      vsftpd \
-      php5-common=5.5.9+dfsg-1ubuntu4.7 \
-      php5-cli=5.5.9+dfsg-1ubuntu4.7 \
-      php5-fpm=5.5.9+dfsg-1ubuntu4.7 \
+      php-apc \
       php-pear=5.5.9+dfsg-1ubuntu4.7 \
-      php5-gd=5.5.9+dfsg-1ubuntu4.7 \
+      php5-cli=5.5.9+dfsg-1ubuntu4.7 \
+      php5-common=5.5.9+dfsg-1ubuntu4.7 \
       php5-curl=5.5.9+dfsg-1ubuntu4.7 \
-      php5-sqlite=5.5.9+dfsg-1ubuntu4.7 \
+      php5-fpm=5.5.9+dfsg-1ubuntu4.7 \
+      php5-gd=5.5.9+dfsg-1ubuntu4.7 \
       php5-mysql=5.5.9+dfsg-1ubuntu4.7 \
       php5-pgsql=5.5.9+dfsg-1ubuntu4.7 \
-      php-apc \
+      php5-sqlite=5.5.9+dfsg-1ubuntu4.7 \
+      pwgen \
+      vsftpd \
       nginx-full && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
