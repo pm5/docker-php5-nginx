@@ -1,8 +1,8 @@
 
 A Docker image for developing PHP app using PHP-FPM and nginx.
 
-Usages
-------
+Usage
+-----
 
 Put an `index.php` file under project root directory with:
 
