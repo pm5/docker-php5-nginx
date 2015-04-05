@@ -42,6 +42,7 @@ RUN rm -f /etc/service/sshd/down
 ADD mykey.pub /tmp/mykey.pub
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+RUN rm -rf /etc/nginx/sites-enabled
 ADD etc/nginx/sites-enabled /etc/nginx/sites-enabled/
 ADD service/nginx.sh /etc/service/nginx/run
 
